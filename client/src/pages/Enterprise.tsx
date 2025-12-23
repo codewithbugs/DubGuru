@@ -31,7 +31,7 @@ export default function Enterprise() {
               <span className="text-primary">On Your Infrastructure</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Complete data sovereignty. Run Dubbinger's powerful AI models on your own private cloud or on-premise hardware. Zero data egress.
+              Complete data sovereignty. Run DubGuru's powerful AI models on your own private cloud or on-premise hardware. Zero data egress.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary h-12 px-8 text-lg">

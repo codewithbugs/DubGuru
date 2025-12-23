@@ -58,7 +58,7 @@ export default function Settings() {
               </div>
               <div className="space-y-2">
                 <Label>Email Address</Label>
-                <Input defaultValue="alex@dubbinger.ai" className="bg-black/20" />
+                <Input defaultValue="alex@DubGuru.ai" className="bg-black/20" />
               </div>
               <div className="pt-4">
                 <Button className="bg-primary text-white"><Save className="w-4 h-4 mr-2" /> Save Changes</Button>

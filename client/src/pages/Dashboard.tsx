@@ -22,7 +22,7 @@ export default function Dashboard() {
           <h1 className="text-3xl font-bold font-heading mb-1">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, Creator.</p>
         </div>
-        <Link href="/dashboard/captions">
+        <Link href="/dashboard/dubbing">
           <Button className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20">
             <Plus className="w-4 h-4 mr-2" /> New Project
           </Button>
@@ -31,9 +31,9 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <StatCard label="Total Minutes Dubbed" value="124m" icon={<Activity className="text-primary" />} />
-        <StatCard label="Languages Used" value="8" icon={<Activity className="text-accent" />} />
-        <StatCard label="Projects Completed" value="12" icon={<Activity className="text-purple-400" />} />
+        <StatCard label="Total Minutes Dubbed" value="4m" icon={<Activity className="text-primary" />} />
+        <StatCard label="Languages Used" value="2" icon={<Activity className="text-accent" />} />
+        <StatCard label="Projects Completed" value="2" icon={<Activity className="text-purple-400" />} />
       </div>
 
       {/* Recent Projects */}
@@ -43,6 +43,7 @@ export default function Dashboard() {
       
       <div className="grid gap-4">
         {[1, 2, 3].map((i) => (
+        <Link href="/dashboard/projects">
           <Card key={i} className="p-4 flex items-center justify-between glass-card border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
             <div className="flex items-center gap-4">
               <div className="w-16 h-10 bg-black/40 rounded flex items-center justify-center text-muted-foreground">
@@ -55,11 +56,12 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center gap-4">
               <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-500 border border-green-500/20">Completed</span>
-              <Button variant="ghost" size="icon">
-                <ArrowRight className="w-4 h-4" />
-              </Button>
+                <Button variant="ghost" size="icon">
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
             </div>
           </Card>
+        </Link>
         ))}
       </div>
     </DashboardLayout>

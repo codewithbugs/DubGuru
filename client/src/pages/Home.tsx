@@ -99,10 +99,10 @@ export default function Home() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-white text-xs font-bold">D</div>
-            <span className="font-bold">Dubbinger</span>
+            <span className="font-bold">DubGuru</span>
           </div>
           <div className="text-sm text-muted-foreground">
-            © 2025 Dubbinger AI. All rights reserved.
+            © 2025 DubGuru AI. All rights reserved.
           </div>
         </div>
       </footer>

@@ -19,7 +19,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   const navItems = [
     { label: "Overview", icon: LayoutDashboard, href: "/dashboard" },
-    { label: "Generate Captions", icon: Type, href: "/dashboard/captions" },
+    // { label: "Generate Captions", icon: Type, href: "/dashboard/captions" },
     { label: "AI Dubbing", icon: Mic2, href: "/dashboard/dubbing" },
     { label: "My Projects", icon: FileVideo, href: "/dashboard/projects" },
     { label: "Settings", icon: Settings, href: "/dashboard/settings" },
@@ -37,7 +37,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 h-[100vh] w-64 bg-sidebar border-r border-sidebar-border z-50 transition-transform duration-300 ease-in-out md:translate-x-0 md:static flex flex-col",
+        "fixed inset-y-0 left-0 h-[100vh] w-64 bg-sidebar border-r border-sidebar-border z-50 transition-transform duration-300 ease-in-out md:translate-x-0 md:sticky flex flex-col",
         isSidebarOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"
       )}>
         <div className="p-6 flex items-center gap-2 border-b border-sidebar-border h-16 shrink-0">
@@ -45,7 +45,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             D
           </div>
           <span className="text-xl font-bold font-heading tracking-tight text-white">
-            Dubbinger
+            DubGuru
           </span>
           <Button variant="ghost" size="icon" className="md:hidden ml-auto text-white/50" onClick={() => setSidebarOpen(false)}>
              <X className="w-5 h-5" />
@@ -88,7 +88,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
           <Button variant="ghost" size="icon" onClick={() => setSidebarOpen(true)}>
             <Menu className="w-6 h-6" />
           </Button>
-          <span className="font-bold text-lg">Dubbinger</span>
+          <span className="font-bold text-lg">DubGuru</span>
           <div className="w-10" /> {/* Spacer */}
         </header>
 

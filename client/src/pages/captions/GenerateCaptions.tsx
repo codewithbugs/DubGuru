@@ -152,9 +152,8 @@ function ConfigureSection({ onNext, sourceLang, setSourceLang, targetLang, setTa
             <SelectTrigger className="h-11 bg-black/20"><SelectValue /></SelectTrigger>
             <SelectContent>
               <SelectItem value="auto">Auto Detect</SelectItem>
-              <SelectItem value="en">English (US)</SelectItem>
-              <SelectItem value="es">Spanish</SelectItem>
-              <SelectItem value="fr">French</SelectItem>
+              <SelectItem value="en">Hindi</SelectItem>
+              <SelectItem value="es">Punjabi</SelectItem>
             </SelectContent>
           </Select>
           <p className="text-xs text-muted-foreground">The language spoken in the video.</p>
@@ -165,11 +164,8 @@ function ConfigureSection({ onNext, sourceLang, setSourceLang, targetLang, setTa
           <Select value={targetLang[0]} onValueChange={(v) => setTargetLang([v])}>
             <SelectTrigger className="h-11 bg-black/20"><SelectValue /></SelectTrigger>
             <SelectContent>
-              <SelectItem value="en">English (US)</SelectItem>
-              <SelectItem value="es">Spanish</SelectItem>
-              <SelectItem value="fr">French</SelectItem>
-              <SelectItem value="de">German</SelectItem>
-              <SelectItem value="jp">Japanese</SelectItem>
+              <SelectItem value="en">Hindi</SelectItem>
+              <SelectItem value="es">Punjabi</SelectItem>
             </SelectContent>
           </Select>
           <p className="text-xs text-muted-foreground">We will translate the captions to this language.</p>

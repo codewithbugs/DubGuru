@@ -15,7 +15,7 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Upload, Mic2, Wand2, Globe2, PlayCircle, Loader2, Check, User, ChevronRight, CheckCircle2 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 
@@ -24,6 +24,29 @@ type Step = "upload" | "configure" | "processing" | "completed";
 export default function Dubbing() {
   const [step, setStep] = useState<Step>("upload");
   const [progress, setProgress] = useState(0);
+
+
+    const fileInputRef = useRef(null);
+
+    const handleButtonClick = () => {
+      (fileInputRef.current as any).click();
+    };
+
+  const handleFileChange = (e: any) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    // Optional validation
+    if (!file.type.startsWith("video/")) {
+      alert("Please select a video file");
+      return;
+    }
+
+    console.log("Selected video:", file);
+
+    // Move to next step
+    setStep("configure");
+  };
 
   const startDubbing = () => {
     setStep("processing");
@@ -37,14 +60,14 @@ export default function Dubbing() {
         }
         return prev + 1; // Slower progress for dubbing
       });
-    }, 150);
+    }, 3500);
   };
 
   return (
     <DashboardLayout>
       <div className="mb-8">
         <h1 className="text-3xl font-bold font-heading mb-2">AI Dubbing Studio</h1>
-        <p className="text-muted-foreground">Translate and dub your videos into 40+ languages with realistic AI voices.</p>
+        <p className="text-muted-foreground">Translate and dub your videos into multiple languages with realistic AI voices.</p>
       </div>
 
        {/* Progress Stepper */}
@@ -83,9 +106,22 @@ export default function Dubbing() {
            </p>
            
            <div className="flex gap-4 w-full max-w-md">
-             <Button onClick={() => setStep("configure")} className="w-full bg-primary h-12 text-lg">
-               Select File
-             </Button>
+             <>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="video/*"
+                className="hidden"
+                onChange={handleFileChange}
+              />
+
+              <Button
+                onClick={handleButtonClick}
+                className="w-full bg-primary h-12 text-lg"
+              >
+                Select Video
+              </Button>
+            </>
            </div>
          </Card>
         )}
@@ -103,9 +139,8 @@ export default function Dubbing() {
                   <Select defaultValue="en">
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="en">English (US)</SelectItem>
-                      <SelectItem value="es">Spanish</SelectItem>
-                      <SelectItem value="fr">French</SelectItem>
+                      <SelectItem value="en">Hindi</SelectItem>
+                      <SelectItem value="es">Punjabi</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -115,11 +150,11 @@ export default function Dubbing() {
                   <Select defaultValue="es">
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="es">Spanish (Spain)</SelectItem>
-                      <SelectItem value="mx">Spanish (Mexico)</SelectItem>
-                      <SelectItem value="fr">French</SelectItem>
+                      <SelectItem value="es">Punjabi</SelectItem>
+                      <SelectItem value="mx">Hindi</SelectItem>
+                      {/* <SelectItem value="fr">French</SelectItem>
                       <SelectItem value="de">German</SelectItem>
-                      <SelectItem value="jp">Japanese</SelectItem>
+                      <SelectItem value="jp">Japanese</SelectItem> */}
                     </SelectContent>
                   </Select>
                 </div>
@@ -127,8 +162,8 @@ export default function Dubbing() {
                 <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
                   <h4 className="font-bold text-sm mb-1 text-primary">Estimated Cost</h4>
                   <div className="flex justify-between items-end">
-                    <span className="text-sm text-muted-foreground">2 mins duration</span>
-                    <span className="text-xl font-bold">2 Credits</span>
+                    <span className="text-sm text-muted-foreground">10 mins duration</span>
+                    <span className="text-xl font-bold">20 Credits</span>
                   </div>
                 </div>
               </div>

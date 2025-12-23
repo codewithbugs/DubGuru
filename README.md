@@ -1,6 +1,6 @@
-# Dubbinger - AI Video Dubbing Platform (Frontend Prototype)
+# DubGuru - AI Video Dubbing Platform (Frontend Prototype)
 
-This is a **Frontend-Only Prototype** for Dubbinger, an AI-powered SaaS platform for video dubbing and caption generation.
+This is a **Frontend-Only Prototype** for DubGuru, an AI-powered SaaS platform for video dubbing and caption generation.
 
 ## 🚀 Quick Start
 

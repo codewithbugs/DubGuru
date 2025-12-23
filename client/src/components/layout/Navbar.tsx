@@ -33,7 +33,7 @@ export function Navbar() {
               D
             </div>
             <span className="text-xl font-bold font-heading tracking-tight text-white">
-              Dubbinger<span className="text-primary">.</span>
+              DubGuru<span className="text-primary">.</span>
             </span>
           </a>
         </Link>

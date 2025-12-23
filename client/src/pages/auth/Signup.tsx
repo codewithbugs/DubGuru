@@ -23,7 +23,7 @@ export default function Signup() {
     e.preventDefault();
     setIsLoading(true);
     setTimeout(() => {
-      localStorage.setItem("dubbinger_user", "true");
+      localStorage.setItem("DubGuru_user", "true");
       setLocation("/dashboard");
     }, 1500);
   };
