@@ -37,7 +37,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 h-full w-64 bg-sidebar border-r border-sidebar-border z-50 transition-transform duration-300 ease-in-out md:translate-x-0 md:static flex flex-col",
+        "fixed inset-y-0 left-0 h-[100vh] w-64 bg-sidebar border-r border-sidebar-border z-50 transition-transform duration-300 ease-in-out md:translate-x-0 md:static flex flex-col",
         isSidebarOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"
       )}>
         <div className="p-6 flex items-center gap-2 border-b border-sidebar-border h-16 shrink-0">
