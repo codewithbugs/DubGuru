@@ -136,13 +136,13 @@ export default function Dubbing() {
               <div className="space-y-6">
                 <div className="space-y-2">
                   <Label>Source Language</Label>
-                  <Select defaultValue="en">
+                  <Select defaultValue="ad">
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="en">Auto Detect</SelectItem>
+                      <SelectItem value="ad">Auto Detect</SelectItem>
                       <SelectItem value="en">English</SelectItem>
-                      <SelectItem value="en">Hindi</SelectItem>
-                      <SelectItem value="es">Punjabi</SelectItem>
+                      <SelectItem value="hi">Hindi</SelectItem>
+                      <SelectItem value="pa">Punjabi</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
