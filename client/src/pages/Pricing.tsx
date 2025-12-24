@@ -49,7 +49,7 @@ export default function Pricing() {
             description="For professional studios and agencies."
             features={[
               "300 minutes dubbing / month",
-              "40+ languages",
+              "Multiple languages",
               "Voice cloning (3 voices)",
               "Priority support",
               "4K export",

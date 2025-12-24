@@ -57,9 +57,16 @@ export default function Projects() {
           date="1 min ago"
         />
         <ProjectCard 
-          title="TVF Demo" 
+          title="TVF Demo 1" 
           type="Dubbing"
           lang="Hindi → Punjabi" 
+          status="completed" 
+          date="2 hours ago"
+        />
+        <ProjectCard 
+          title="TVF Demo" 
+          type="Dubbing"
+          lang="Hindi → English" 
           status="completed" 
           date="2 hours ago"
         />
@@ -82,6 +89,8 @@ function ProjectCard({ title, type, lang, status, date }: any) {
       return "/assets/tvf-dubguru-demo.mp4";
     } else if(title === "Chaupal Demo") {
       return "/assets/chaupal-dubguru-demo.mp4";
+    } else if(title === "TVF Demo 1") {
+      return "/assets/tvf-dubguru-demo1.mp4";
     }
     return "#";
   }

@@ -40,7 +40,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Now supporting 40+ languages
+            Now supporting multiple languages
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold font-heading tracking-tight mb-6 max-w-4xl bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
@@ -78,7 +78,7 @@ export default function Home() {
             <FeatureCard 
               icon={<Type className="w-8 h-8 text-primary" />}
               title="Smart Captions"
-              description="Auto-generate accurate captions in 40+ languages with custom styling controls."
+              description="Auto-generate accurate captions in multiple languages with custom styling controls."
             />
             <FeatureCard 
               icon={<Mic className="w-8 h-8 text-accent" />}

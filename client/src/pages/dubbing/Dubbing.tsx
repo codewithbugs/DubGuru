@@ -139,6 +139,8 @@ export default function Dubbing() {
                   <Select defaultValue="en">
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="en">Auto Detect</SelectItem>
+                      <SelectItem value="en">English</SelectItem>
                       <SelectItem value="en">Hindi</SelectItem>
                       <SelectItem value="es">Punjabi</SelectItem>
                     </SelectContent>
@@ -150,6 +152,7 @@ export default function Dubbing() {
                   <Select defaultValue="es">
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="en">English</SelectItem>
                       <SelectItem value="es">Punjabi</SelectItem>
                       <SelectItem value="mx">Hindi</SelectItem>
                       {/* <SelectItem value="fr">French</SelectItem>
