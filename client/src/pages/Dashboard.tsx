@@ -42,7 +42,45 @@ export default function Dashboard() {
       </h2>
       
       <div className="grid gap-4">
-        {[1, 2, 3].map((i) => (
+        <Link href="/dashboard/projects">
+          <Card key={1} className="p-4 flex items-center justify-between glass-card border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-10 bg-black/40 rounded flex items-center justify-center text-muted-foreground">
+                <FileVideo className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-medium group-hover:text-primary transition-colors">TVF Demo</h3>
+                <p className="text-sm text-muted-foreground">Edited 2 hours ago • Punjabi to Hindi</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-500 border border-green-500/20">Completed</span>
+                <Button variant="ghost" size="icon">
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+            </div>
+          </Card>
+        </Link>
+        <Link href="/dashboard/projects">
+          <Card key={2} className="p-4 flex items-center justify-between glass-card border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-10 bg-black/40 rounded flex items-center justify-center text-muted-foreground">
+                <FileVideo className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-medium group-hover:text-primary transition-colors">Chaupal Demo</h3>
+                <p className="text-sm text-muted-foreground">Edited 1 day ago • Hindi to Punjabi</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-500 border border-green-500/20">Completed</span>
+                <Button variant="ghost" size="icon">
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+            </div>
+          </Card>
+        </Link>
+        {/* {[1, 2, 3].map((i) => (
         <Link href="/dashboard/projects">
           <Card key={i} className="p-4 flex items-center justify-between glass-card border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
             <div className="flex items-center gap-4">
@@ -62,7 +100,7 @@ export default function Dashboard() {
             </div>
           </Card>
         </Link>
-        ))}
+        ))} */}
       </div>
     </DashboardLayout>
   );

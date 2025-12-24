@@ -50,32 +50,25 @@ export default function Projects() {
 
       <div className="space-y-4">
         <ProjectCard 
-          title="Product Demo 2025" 
+          title="Chaupal Demo 1" 
           type="Dubbing" 
-          lang="English → Spanish" 
+          lang="Punjabi → Hindi" 
+          status="processing" 
+          date="1 min ago"
+        />
+        <ProjectCard 
+          title="TVF Demo" 
+          type="Dubbing"
+          lang="Hindi → Punjabi" 
           status="completed" 
           date="2 hours ago"
         />
         <ProjectCard 
-          title="Q4 All Hands Meeting" 
-          type="Captions" 
-          lang="English (US)" 
-          status="processing" 
-          date="5 hours ago"
-        />
-        <ProjectCard 
-          title="Marketing Teaser v2" 
+          title="Chaupal Demo" 
           type="Dubbing" 
-          lang="English → French" 
+          lang="Punjabi → Hindi" 
           status="completed" 
           date="1 day ago"
-        />
-        <ProjectCard 
-          title="Tutorial: Getting Started" 
-          type="Captions" 
-          lang="English (US)" 
-          status="draft" 
-          date="3 days ago"
         />
       </div>
     </DashboardLayout>
@@ -83,8 +76,18 @@ export default function Projects() {
 }
 
 function ProjectCard({ title, type, lang, status, date }: any) {
+
+  const getDownloadLink = () => {
+    if(title === "TVF Demo") {
+      return "/assets/tvf-dubguru-demo.mp4";
+    } else if(title === "Chaupal Demo") {
+      return "/assets/chaupal-dubguru-demo.mp4";
+    }
+    return "#";
+  }
+
   return (
-    <Card className="p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 glass-card border-white/5 hover:border-white/10 transition-colors group">
+    <Card className="p-4 flex flex-col cursor-pointer md:flex-row items-start md:items-center justify-between gap-4 glass-card border-white/5 hover:border-white/10 transition-colors group">
       <div className="flex items-center gap-4 w-full md:w-auto">
         <div className="w-16 h-10 md:w-24 md:h-16 bg-black/40 rounded flex items-center justify-center text-muted-foreground shrink-0 border border-white/5">
           <FileVideo className="w-6 h-6" />
@@ -104,11 +107,17 @@ function ProjectCard({ title, type, lang, status, date }: any) {
       <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
         <StatusBadge status={status} />
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center cursor-pointer gap-2">
           {status === 'completed' && (
-            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
-              <Download className="w-4 h-4" />
-            </Button>
+            <a href={getDownloadLink()} download>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-muted-foreground cursor-pointer hover:text-primary"
+              >
+                <Download className="w-4 h-4" />
+              </Button>
+            </a>
           )}
           
           <DropdownMenu>
